@@ -1,0 +1,14 @@
+@import url("reset.css");
+
+.container{
+    margin: 0 auto;
+    max-width: 1360px;
+}
+
+.header{
+    background-image: url("../images/header__bg.jpg");
+    aspect-ratio: 1440 / 1084;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
