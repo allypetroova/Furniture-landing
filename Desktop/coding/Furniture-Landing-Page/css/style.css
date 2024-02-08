@@ -1,5 +1,13 @@
 @import url("reset.css");
 
+body{
+    font-family: 'Gilroy', sans-serif;
+}
+
+a{
+    color: inherit;
+}
+
 .container{
     margin: 0 auto;
     max-width: 1360px;
@@ -11,4 +19,147 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    color: #fff;
 }
+
+.header__nav{
+    padding: 40px 0 86px;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    gap: 20px;
+}
+
+.nav__logo{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.28px;
+    align-self: center;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    align-self: center;
+    justify-self: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.basket__link{
+    align-self: center;
+    justify-self: end;
+    position: relative;
+}
+
+.basket__count{
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: -6px;
+    padding: 0 6px;
+    height: 25px;
+    background-color: #E58411;
+    border-radius: 40px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.header__content {
+    text-align: center;
+}
+.header__title {
+    margin: 0 auto;
+    max-width: 900px;
+    margin-bottom: 14px;
+    font-size: 80px;
+    line-height: 130%;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    text-transform: capitalize;
+}
+.header__text {
+    margin: 0 auto;
+    max-width: 606px;
+    margin-bottom: 45px;
+    font-size: 24px;
+    line-height: 160%;
+}
+
+.search-form{
+    margin: 0 auto;
+    display: flex;
+    max-width: 344px;
+    padding: 8px 8px 8px 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    border-radius: 42px;
+    border: 0.86px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.search-form__input {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+
+    &::placeholder {
+        color: #fff;
+        font-weight: 400;
+    }
+}
+
+.search-form__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+    background-color: #E58411;
+}
+
+/*-----------benefits-----------*/
+
+.benefits {
+    padding: 120px 0;
+    color: #1E1E1E;
+}
+
+.benefits__grid {
+    display: grid;
+}
+
+.benefits__title {
+    max-width: 242px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.benefit {
+    max-width: 284px;
+}
+
+.benefit__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.benefit__text {
+    margin-bottom: 14px;
+}
+
+.benefit__link {
+    color: #E58411;
+    background-image: url("../images/benefit__arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 55px;
+}
+
+/*-----------benefits-----------*/
