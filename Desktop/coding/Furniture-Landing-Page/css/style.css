@@ -36,7 +36,7 @@ a{
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.28px;
-    color: #fff;
+    color: #fff !important;
 }
 
 .nav__logo{
@@ -97,6 +97,7 @@ a{
 .search-form{
     margin: 0 auto;
     display: flex;
+    gap: 10px;
     max-width: 344px;
     padding: 8px 8px 8px 20px;
     justify-content: space-between;
@@ -109,6 +110,7 @@ a{
 }
 
 .search-form__input {
+    flex-grow: 1;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
@@ -121,11 +123,13 @@ a{
 }
 
 .search-form__btn {
+    flex-shrink: 0;
     width: 40px;
     height: 40px;
     border-radius: 24px;
     background-color: #E58411;
 }
+
 
 /*-----------benefits-----------*/
 
@@ -162,11 +166,12 @@ a{
 
 .read-more {
     color: #E58411;
-    background-image: url("../images/benefit__arrow.svg");
+    background-image: url("../images/icons/benefit__arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
     padding-right: 55px;
 }
+
 
 /*-----------products-----------*/
 .products {
@@ -213,15 +218,28 @@ a{
 
 .products__slider {
     margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
+}
+
+.slider{
+    position: relative;
 }
 
 .card{
+    position: relative;
     width: 268px;
+    font-family: 'Inter', sans-serif;
+}
+
+.card__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .card__photo{
+    margin-top: 50px;
     height: 240px;
     background-color: #fafafa;
     border-radius: 20px 20px 0 0;
@@ -232,7 +250,7 @@ a{
     margin-top: -50px;
 }
 
-.card__desc{                                 /*-----------for last project-----------*/
+.card__desc{
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -242,7 +260,7 @@ a{
     border-radius: 0 0 20px 20px;
 }
 
-.card__footer{                              /*-----------same-----------*/
+.card__footer{
     margin-top: auto;
     display: flex;
     justify-content: space-between;
@@ -250,18 +268,79 @@ a{
 }
 
 .card__category {
+    position: relative;
+    z-index: 3;
+    color: #8D8D8D;
+    font-size: 16px;
 }
 
 .card__title {
+    color: #0D1B39;
+    font-size: 21px;
+    font-weight: 600;
 }
 
 .card__rating {
+    display: flex;
+    gap: 3px;
 }
 
 .card__price {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+    color: #0D1B39;
+    font-size: 21px;
+    font-weight: 600;
+
+    &::before {
+        content: attr(data-value);
+        font-size: 15px;
+    }
 }
 
 .card__btn {
+    position: relative;
+    z-index: 3;
+
+    width: 48px;
+    height: 48px;
+    background-color: #0D1B39;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.slider__btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 7.03125px 19.53125px 0px rgb(0, 0, 0, 0.06);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__btn--prev {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider__btn--next {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
 }
 
 .products__link {
@@ -272,12 +351,23 @@ a{
     font-size: 18px;
 }
 
+
 /*-----------footer-----------*/
 
 .footer{
     padding: 120px 0 56px;
     background-color: #2D2F33;
     color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+
+    a{
+        transition: opacity 0.1s ease-in;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
 }
 
 .container--small{
@@ -292,42 +382,35 @@ a{
 }
 
 .footer__desc{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.6;
+    p + p{
+        margin-top: 1em;
+    }
 }
 
 .footer__nav--services{
     grid-column-start: 3;
 }
 
-.footer__nav {
-}
-.footer__nav--services {
-}
 .footer__nav__title {
     margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
     font-size: 17px;
-    font-weight: 400;
     color: #E58411;
 }
+
 .footer__list {
+    display: grid;
+    gap: 16px;
 }
-
-.footer__list-item {
-    margin-bottom: 16px;
-    font-size: 15;
-    font-weight: 500;
-}
-
-.footer__list-item:last-child{
-    margin-bottom: 0;
-}
-
+  
 .footer__row{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer__copyright{
+    font-family: 'DM Sans', sans-serif;
 }
 
 .footer__logo{
