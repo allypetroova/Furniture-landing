@@ -59,9 +59,12 @@
             <img class="basket__img" src="images/icons/basket.svg" alt="Basket">
             <div class="basket__count">0</div>
           </a>
+          <button class="nav__btn">
+            <img src="./images/icons/mobile-nav.svg" alt="Open navigation">
+          </button>
         </nav>
       </div>
-      <div class="header__content">
+      <div class="header__content none">
         <h1 class="header__title">
           Make your interior more minimalistic &amp;&nbsp;modern
         </h1>
@@ -76,11 +79,61 @@
         </form>
       </div>
     </div>
+
+    <div class="mobile-nav-wrapper">
+
+      <div class="mobile-nav-header">
+        <a href="#" class="mobile-card">
+          <div class="basket__link" href="#">
+            <img class="basket__img" src="images/icons/basket.svg" alt="Basket">
+            <div class="basket__count">0</div>
+          </div>
+        </a>
+        <button class="mobile-nav-btn-close">
+          <img src="./images/icons/close.svg" alt="Close navigation">
+        </button>
+      </div>
+
+      <ul class="mobile-nav">
+        <li class="mobile-nav-item">
+          <a class="mobile-nav__link mobile-nav__link--dropdown" href="#">
+            Furniture
+          </a>
+          <ul class="mobile-sub-nav">
+            <li class="mobile-sub-nav__item">
+              <a class="mobile-sub-nav__link" href="#">Beds</a>
+            </li>
+            <li class="mobile-sub-nav__item">
+              <a class="mobile-sub-nav__link" href="#">Chair</a>
+            </li>
+            <li class="mobile-sub-nav__item">
+              <a class="mobile-sub-nav__link" href="#">All</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="#">
+            Shop
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="#">
+            About Us
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link" href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </header>
 
   <main class="main">
 
-    <section class="benefits">
+    <section class="benefits none">
       <div class="container">
         <div class="benefits__grid">
           <h2 class="benefits__title">Why Choosing Us</h2>
@@ -109,7 +162,7 @@
       </div>
     </section>
   
-    <section class="products">
+    <section class="products none">
       <div class="container">
         <h2 class="products__title">Best Selling Product</h2>
         <div class="products__tabs">
@@ -332,7 +385,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer none">
     <div class="container container--small">
       <div class="footer__grid">
 

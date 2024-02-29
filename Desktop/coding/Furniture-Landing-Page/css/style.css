@@ -2,6 +2,7 @@
 
 @import "reset.css";
 @import "vars.css";
+@import "__mobile.css";
 
 body{
     font-family: var(--font-main);
@@ -13,17 +14,27 @@ a{
 }
 
 .container{
+    max-width: 1310px;
+    padding: 0 15px;
     margin: 0 auto;
-    max-width: 1360px;
+}
+
+.none{
+    display: none;
 }
 
 .header{
+    background-color: var(--footer-bg);
     background-image: url("../images/header__bg.jpg");
     aspect-ratio: 1440 / 1084;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     color: var(--header-text-color);
+
+    @media (max-width: 992px) {
+        position: static;
+    }
 }
 
 .header__nav{
@@ -56,6 +67,10 @@ a{
     justify-self: center;
     font-size: 18px;
     font-weight: 500;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
 }
 
 .nav__list-item{
@@ -135,6 +150,14 @@ a{
     border-radius: 40px;
     font-weight: 700;
     line-height: 25px;
+}
+
+.nav__btn{
+    display: none;
+
+    @media (max-width: 992px) {
+        display: block;
+    }
 }
 
 .header__content {
