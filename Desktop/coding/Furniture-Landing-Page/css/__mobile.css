@@ -8,7 +8,9 @@
     padding: 30px 30px;
     color: var(--footer-text-color);
     background-color: var(--footer-bg);
+}
 
+.mobile-nav-wrapper--open{
     @media (max-width: 992px) {
         display: block;
     }
@@ -34,7 +36,7 @@
     padding-right: 20px;
     border-right: 1px solid rgb(255, 255, 255, 0.2);
     font-size: 22px;
-    font-width: 500px;
+    font-weight: 500px;
 }
 
 .mobile-nav {
