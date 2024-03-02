@@ -19,10 +19,6 @@ a{
     margin: 0 auto;
 }
 
-.none{
-    display: none;
-}
-
 .header{
     background-color: var(--footer-bg);
     background-image: url("../images/header__bg.jpg");
@@ -163,26 +159,39 @@ a{
 .header__content {
     text-align: center;
 }
+
 .header__title {
-    margin: 0 auto;
-    max-width: 900px;
     margin-bottom: 14px;
-    font-size: 80px;
-    line-height: 130%;
+
     font-weight: 700;
+    font-size: clamp(28px, 0.821rem + 4.64vw, 80px);
+
+    text-wrap: balance;
+    line-height: 130%;
     letter-spacing: -0.8px;
     text-transform: capitalize;
 }
+
 .header__text {
     margin: 0 auto;
     max-width: 606px;
     margin-bottom: 45px;
-    font-size: 24px;
+    opacity: 0.8;
+    font-size: clamp(16px, 0.857rem + 0.71vw, 24px);
+    text-wrap: balance;
     line-height: 160%;
 }
 
-.search-form{
+.header__search{
     margin: 0 auto;
+    display: inline-block;
+
+    @media (max-width: 819px) {
+        display: none;
+    }
+}
+
+.search-form{
     display: flex;
     gap: 10px;
     max-width: 344px;
@@ -221,29 +230,34 @@ a{
 /*-----------benefits-----------*/
 
 .benefits {
-    padding: 120px 0;
+    padding: clamp(60px, 2.679rem + 5.36vw, 120px) 0;
 }
 
 .benefits__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(30px, 0.982rem + 4.46vw, 60px) 20px;
+    }
+
+    @media (max-width: 629px) {
+        grid-template-columns: 1fr;
+    }
 }
 
-.benefits__title {
-    max-width: 260px;
-    font-size: 42px;
+.title-2{
+    font-size: clamp(32px, 1.702rem + 1.49vw, 42px);
     font-weight: 700;
-}
-
-.benefit {
-    max-width: 284px;
 }
 
 .benefit__title {
+    margin-bottom: 20px;
+    max-width: 260px;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
 }
 
 .benefit__text {
@@ -269,8 +283,6 @@ a{
 .products__title {
     margin-bottom: 32px;
     text-align: center;
-    font-size: 42px;
-    font-weight: 700;
 }
 
 .products__tabs {
@@ -304,7 +316,15 @@ a{
 }
 
 .products__slider {
-    margin-bottom: 60px;
+    margin-bottom: clamp(30px, 0.982rem + 4.46vw, 60px);
+
+    @media (max-width: 1400px) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: 629px) {
+        padding: 0 20px;
+    }
 }
 
 .slider{
